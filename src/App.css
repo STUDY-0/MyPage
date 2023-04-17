@@ -36,36 +36,8 @@
     transform: rotate(360deg);
   }
 }
-
-#container1{
+#container{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
-}
-#profile{
-  display: inline-flex;
-  margin-left: 10%;
-  height: 20%;
-}
-#user{
-  display: inline-flex;
-}
-#userinfo{
-  display: inline-flex;
-  flex-direction: column;
-  margin-left: 20%;
-}
-.username{
-  display: flex;
-}
-.useremail{
-  display: flex;
-}
-#usertable{
-  display: inline-flex;
-  margin-left: 10%;
 }
 .grid-container{
   display: grid;
@@ -77,34 +49,10 @@
 
 
 
-#container2{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
-}
-#usertime{
-  display: inline-flex;
-  flex-direction: column;
-}
-#usercalendar{
-  display: inline-flex;
-  
-}
 
 .grid-container2{
   display: grid;
   max-width: 600px;
   height: 400px;
   grid-template-columns: repeat(7, 1fr);
-}
-.grid-item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(155, 155, 155);
-}
-.days-of-the-week{
-  color: rgb(49, 49, 49);
 }
