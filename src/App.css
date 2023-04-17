@@ -1,3 +1,8 @@
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+* {
+    font-family: 'galmuri9';
+}
+
 .App {
   text-align: center;
 }
@@ -36,8 +41,19 @@
     transform: rotate(360deg);
   }
 }
+
+
 #container{
-  display: flex;
+  display: grid;
+  flex-grow: 1;
+  flex-shrink: 1; 
+  grid-gap: 10%;
+  margin-top: 5%;
+}
+#container1{
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  justify-content: center;
 }
 .grid-container{
   display: grid;
@@ -45,14 +61,41 @@
   height: 400px;
   grid-template-columns: repeat(5, 1fr);
 }
+#user{
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 5%;
+}
+#profile{
+  justify-self: end; 
+  align-self: center;
+}
+#userinfo{
+  justify-self: start; 
+  align-self: center;
+}
+#usertable{
+  display: grid;
+}
 
 
 
 
-
+#container2{
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  justify-content: center;
+}
 .grid-container2{
   display: grid;
   max-width: 600px;
   height: 400px;
   grid-template-columns: repeat(7, 1fr);
+}
+#usertc{
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+}
+#usertimecal{
+  justify-self: end; 
 }
