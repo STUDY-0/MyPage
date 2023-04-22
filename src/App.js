@@ -7,7 +7,7 @@ function App() {
         <div id="container">
             <div id="container1">
                 <div id="user">
-                    <img id="profile" src="./img/user.png" alt="profile"/>
+                    <img id="profile" src="./img/user1.png" alt="profile"/>
             
                     <div id="userinfo">
                         <p class="username">yang hyewon</p>

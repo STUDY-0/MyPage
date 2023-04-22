@@ -60,6 +60,9 @@
   max-width: 600px;
   height: 400px;
   grid-template-columns: repeat(5, 1fr);
+  border: #666666 solid 1px;
+  border-radius: 10%;
+  padding: 5%;
 }
 #user{
   display: grid;
@@ -69,6 +72,8 @@
 #profile{
   justify-self: end; 
   align-self: center;
+  border-radius: 100%;
+  border: solid #666666 3px;
 }
 #userinfo{
   justify-self: start; 
