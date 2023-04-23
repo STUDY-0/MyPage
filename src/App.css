@@ -47,9 +47,10 @@
   display: grid;
   flex-grow: 1;
   flex-shrink: 1; 
-  grid-gap: 10%;
+  grid-gap: 5%;
   margin-top: 5%;
 }
+
 #container1{
   display: grid;
   grid-template-columns: repeat(2, 30%);
@@ -66,18 +67,18 @@
 }
 #user{
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  /* grid-template-columns: repeat(2, 50%);*/
   grid-gap: 5%;
 }
 #profile{
-  justify-self: end; 
-  align-self: center;
+  justify-self: center; 
+  align-self: flex-end;
   border-radius: 100%;
   border: solid #666666 3px;
 }
 #userinfo{
-  justify-self: start; 
-  align-self: center;
+  justify-self: center; 
+  align-self: flex-start;
 }
 #usertable{
   display: grid;
@@ -96,6 +97,9 @@
   max-width: 600px;
   height: 400px;
   grid-template-columns: repeat(7, 1fr);
+  border: #666666 solid 1px;
+  border-radius: 10%;
+  padding: 5%;
 }
 #usertc{
   display: grid;
