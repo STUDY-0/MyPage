@@ -1,10 +1,13 @@
 
 import './App.css';
+// import Navbar from './Navbar';
 
 function App() {
   return (
     <div className="App">
+        
         <div id="container">
+        {/* <Navbar></Navbar> */}
             <div id="container1">
                 <div id="user">
                     <img id="profile" src="./img/user1.png" alt="profile"/>
