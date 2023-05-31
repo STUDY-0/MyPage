@@ -63,6 +63,9 @@ function App() {
     setMonth(newMonth);
   };
 
+  //총 studyTime
+  var monthTotal = '02:26:00';
+
   //최근 studyTime
   const [studyTimeData] = useState([
     { date: '5/25', time: '02:00:00' },
@@ -108,18 +111,19 @@ function App() {
                     <div id="userinfo">
                         <p className="username">yang hyewon</p>
                         <p className="useremail">w2106@e-mirim.hs.kr</p>
-                        <button className='userEdit'>EDIT</button>
+                        <button className='userLogout'>LOGOUT</button>
                     </div>
                 </div>
 
              <div className='totalTime'>
                     <h1 className='totalH1'>{year}년 {month}월 총 공부시간</h1>
+                    <span className='totalSpan'>{monthTotal}</span>
                 </div>
             </div>
 
             <div id="container2">
                 <div id="usertimecal">
-                    <table>
+                    <table className='studyTime'>
                         <thead>
                         <tr>
                             <th className='studyTimeTh'>Date</th>
@@ -146,9 +150,7 @@ function App() {
                         <div id="calendar">
                             <div className="grid-container-calendar">
                             <div className="grid-item days-of-the-week-calendar">일</div>
-                            <div className="
-                            
-                            -item days-of-the-week-calendar">월</div>
+                            <div className="grid-item days-of-the-week-calendar">월</div>
                             <div className="grid-item days-of-the-week-calendar">화</div>
                             <div className="grid-item days-of-the-week-calendar">수</div>
                             <div className="grid-item days-of-the-week-calendar">목</div>
