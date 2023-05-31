@@ -3,8 +3,33 @@
     font-family: 'galmuri9';
 }
 
-/* calendar */
 
+/* userInfo */
+.userEdit {
+  width: 4rem;
+  height: 1.5rem;
+  background-color: rgb(232, 232, 232);
+  cursor: pointer;
+}
+
+/* totalTime */
+.totalH1 {
+  text-align: center;
+}
+
+/* studyTime */
+.studyTimeTh {
+  width: 7rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.studyDate, .studyTime {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+/* calendar */
 .calendar {
   border: #666666 solid 1.5px;
   border-radius: 2rem;
@@ -61,54 +86,22 @@
   grid-column-start: 5;
 }
 
-/* 시간표 */
-.timetable {
-  border: #666666 solid 1.5px;
-  border-radius: 2rem;
-  padding: 5%;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-.th {
-  padding-bottom: 2%;
-}
-
-.td-time {
-  width: 10%;
-  text-align: center;
-}
-
-.td-data {
-  width: 18%;
-  border: #666 1px solid;
-  text-align: center;
-}
-
 
 @media only screen and (min-width: 1024px) {
   /* 태블릿 */
   #container{
     display: grid;
-    flex-grow: 1;
-    flex-shrink: 1; 
-    grid-gap: 5%;
+    grid-gap: 7%;
+    width: auto;
+    margin-top: 7%;
   }
   
   #container1{
     display: grid;
     grid-template-columns: repeat(2, 30%);
     justify-content: center;
-    margin-top: 7%;
-  }
-  .grid-container{
-    display: grid;
-    max-width: 600px;
-    height: 400px;
-    grid-template-columns: repeat(5, 1fr);
-    border: #666666 solid 1px;
-    border-radius: 10%;
-    padding: 5%;
+    width: auto;
+    height: 20rem;
   }
   #user{
     display: grid;
@@ -135,11 +128,14 @@
     display: grid;
     grid-template-columns: repeat(2, 30%);
     justify-content: center;
+    width: auto;
+    height: 20rem;
   }
   .grid-container2{
     display: grid;
     max-width: 600px;
-    height: 400px;
+    height: auto;
+    min-height: fit-content;
     grid-template-columns: repeat(7, 1fr);
     border: #666666 solid 1px;
     border-radius: 10%;
@@ -150,7 +146,7 @@
     grid-template-columns: repeat(2, 40%);
   }
   #usertimecal{
-    justify-self: end; 
+    justify-self: center; 
   }
 }
 
@@ -220,12 +216,5 @@
   }
   #usertimecal{
     justify-self: end; 
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  /* 모바일 */
-  body{
-    background-color: black;
   }
 }
