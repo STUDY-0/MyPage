@@ -32,11 +32,12 @@
 
 .calendar-h1 {
   text-align: center;
+  font-size: 1.75rem;
   padding: 0 20px 0 20px;
 }
 
 #calendar {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .grid-container-calendar,
