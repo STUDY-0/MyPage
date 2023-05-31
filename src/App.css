@@ -6,9 +6,9 @@
 /* calendar */
 
 .calendar {
-  border: #666666 solid 1px;
-  border-radius: 10%;
-  padding: 5%;
+  border: #666666 solid 1.5px;
+  border-radius: 2rem;
+  padding: 2% 5% 3% 5%;
 }
 
 .flex-container {
@@ -20,9 +20,14 @@
 
 #prev_btn,
 #next_btn {
-  border: 1px solid #252525;
   border-radius: 8px;
   padding: 10px;
+}
+
+.angle-icon {
+  width: 1.25rem;
+  height: auto;
+  padding-top: 25%;
 }
 
 .calendar-h1 {
@@ -54,6 +59,31 @@
 .first {
   grid-column-start: 5;
 }
+
+/* 시간표 */
+.timetable {
+  border: #666666 solid 1.5px;
+  border-radius: 2rem;
+  padding: 5%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.th {
+  padding-bottom: 2%;
+}
+
+.td-time {
+  width: 10%;
+  text-align: center;
+}
+
+.td-data {
+  width: 18%;
+  border: #666 1px solid;
+  text-align: center;
+}
+
 
 @media only screen and (min-width: 1024px) {
   /* 태블릿 */

@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import './Navbar.css';
-import logo from './logo.png'
+import logo from './logo.png';
+import leftIcon from './free-icon-font-angle-left-3916934.svg';
+import rightIcon from './free-icon-font-angle-right-3916924.svg';
 
 function App() {
     useEffect(() => {
@@ -74,8 +76,30 @@ function App() {
             setCalendar(year, month);
         }
 
+        const initButton = () => {
+            const prev_btn = document.getElementById("prev_btn");
+            const next_btn = document.getElementById("next_btn");
+
+            //js event 달자
+            // prev_btn.addEventListener("click", prevMonth);
+            // next_btn.addEventListener("click", nextMonth);
+            prev_btn.onclick = prevMonth;
+            next_btn.onclick = nextMonth;
+        }
+        initButton();
+
     
     }, []);
+
+    const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+    const timeSlots = ['1', '2', '3', '4', '5', '6', '7'];
+
+    const timetableData = [
+        { day: 'Mon', time: '1', subject: '국어' },
+        { day: 'Tue', time: '2', subject: 'DB' },
+        { day: 'Thu', time: '3', subject: 'UI/UX' },
+    ];
+
   return (
     <div className="App">
         <nav className='nav'>
@@ -105,45 +129,29 @@ function App() {
                 </div>
                 
                 <div id="usertable">
-                    <div className="grid-container">
-                        <div className="grid-item days-of-the-week">월</div>
-                        <div className="grid-item days-of-the-week">화</div>
-                        <div className="grid-item days-of-the-week">수</div>
-                        <div className="grid-item days-of-the-week">목</div>
-                        <div className="grid-item days-of-the-week">금</div>
-            
-            
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                        <div className="grid-item1">국어</div>
-                    </div>
+                <table className='timetable'>
+                <thead>
+                    <tr>
+                    <th></th>
+                    {daysOfWeek.map(day => (
+                        <th className='th' key={day}>{day}</th>
+                    ))}
+                    </tr>
+                </thead>
+                <tbody>
+                    {timeSlots.map(time => (
+                    <tr key={time}>
+                        <td className='td td-time'>{time}</td>
+                        {daysOfWeek.map(day => (
+                        <td key={day + time} className='td td-data'>
+                            {/* 해당 셀에 항목이 있는 경우 표시합니다. */}
+                            {timetableData.find(item => item.day === day && item.time === time)?.subject}
+                        </td>
+                        ))}
+                    </tr>
+                    ))}
+                </tbody>
+                </table>
                 </div>
             </div>
             
@@ -177,9 +185,9 @@ function App() {
                 <div id="usercalendar">
                     <div className="calendar">
                         <div className="flex-container">
-                            <div id="prev_btn">-</div>
+                            <div id="prev_btn"><img src={leftIcon} className='angle-icon'></img></div>
                                 <h1 className='calendar-h1'><span id="title_year"></span>년 <span id="title_month"></span>월</h1>
-                            <div id="next_btn">-</div>
+                            <div id="next_btn"><img src={rightIcon} className='angle-icon'></img></div>
                         </div>
                         <div id="calendar">
                             <div className="grid-container-calendar">
