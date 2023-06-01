@@ -8,11 +8,11 @@
   width: 4rem;
   height: 1.5rem;
   border-radius: 0.25rem;
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(212, 212, 212);
   cursor: pointer;
 }
 .userLogout:hover {
-  background-color: rgb(212, 212, 212);
+  background-color: #69B567;
 }
 
 /* totalTime */
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: #666666 solid 1.75px;
+  
   border-radius: 2rem;
   padding: 5%;
   /* 요소 선택 막기 */
@@ -40,6 +40,7 @@
   display: inline-block;
   text-align: center;
   font-size: 4rem;
+  color: #69B567;
 }
 
 /* studyTime */
